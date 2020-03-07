@@ -1,0 +1,24 @@
+{
+  "name": "patch-tag",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Benjamin LEVESQUE",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.1",
+    "husky": "^4.2.3"
+  },
+  "scripts": {
+    "build": "ncc build src/index.ts -m",
+    "dev": "yarn build -w"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
+  }
+}

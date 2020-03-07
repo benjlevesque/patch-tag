@@ -1,0 +1,16 @@
+name: "Hello World"
+description: "Greet someone and record the time"
+inputs:
+  tag:
+    description: "The new tag to patch"
+    required: true
+    default: GITHUB_SHA
+  target:
+    description: "The path to the file to patch"
+    required: true
+  path:
+    description: "The yaml path to the key to patch"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
