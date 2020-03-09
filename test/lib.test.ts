@@ -16,4 +16,8 @@ describe("getNewValue", () => {
       "my-registry/my-docker-image:abcd345"
     );
   });
+
+  it("should handle line breaks", () => {
+    expect(getNewValue("abcd\n", "abcd345")).toBe("abcd345");
+  });
 });
