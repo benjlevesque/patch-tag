@@ -1,4 +1,4 @@
-import { getNewValue } from "../src";
+import { getNewValue } from "../src/lib";
 
 describe("getNewValue", () => {
   it("should support format tag", () => {
